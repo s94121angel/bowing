@@ -3,7 +3,7 @@
 	public class Game
 	{
 		int m_nCurrentRoll = 0;
-		int[] m_nRollsArray = new int[ 20 ];
+		int[] m_nRollsArray = new int[ 21 ];
 		const int ALL_frame = 10;
 
 		public void roll( int nPins )
