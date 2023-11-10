@@ -139,6 +139,30 @@ namespace Bowling
 			Assert.AreEqual( 300, g.score() );
 		}
 
+		[Test]
+		public void GetScore_SpareInDiffFrame_Score6()
+		{
+			// Arrange
+			Game g = new Game();
+
+			// Act
+			g.roll( 10 );
+			g.roll( 10 );
+			g.roll( 10 );
+			g.roll( 10 );
+			g.roll( 10 );
+			g.roll( 10 );
+			g.roll( 10 );
+			g.roll( 10 );
+			g.roll( 10 );
+			g.roll( 10 );
+			g.roll( 0 );
+			g.roll( 10 );
+
+			// Assert
+			Assert.AreEqual( 280, g.score() );
+		}
+
 		static void RollRepeat( Game g, int nRepTimes, int nPins )
 		{
 			for( int i = 0; i < nRepTimes; i++ ) {
